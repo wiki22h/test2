@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: rgb(20, 19, 19);
+                background: url('HGSC.jpg') center center no-repeat;
+                background-size: cover;
+            }
+
+            .wrapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 350px;
+                height: 350px;
+                text-align: center;
+                border: 1px solid rgb(241, 241, 241);
+                border-radius: 12px;
+                padding: 10px 20px;
+                background: rgba(0, 0, 0, 0.5); /* Slightly darken background for better text readability */
+                backdrop-filter: blur(6px);
+                box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+            }
+
+            .wrapper h2 {
+                font-size: 30px;
+                color: #fffefe;
+                margin-bottom: 20px; /* Add margin for better spacing */
+            }
+
+            .input-field {
+                position: relative;
+                margin: 15px 0;
+            }
+
+            .input-field input[type="email"],
+            .input-field input[type="password"] {
+                border-radius: 10px;
+                background: transparent;
+                border: 2px solid rgb(255, 255, 255);
+                width: 90%;
+                height: 40px;
+                padding: 10px 10px 10px 20px;
+                color: #ffffff;
+                backdrop-filter: blur(15px);
+                outline: none;
+            }
+
+            .input-field i {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+                color: rgb(252, 252, 252);
+            }
+
+            input::placeholder {
+                color: rgb(255, 255, 255);
+            }
+
+            .input-field input[type="email"]:focus::placeholder,
+            .input-field input[type="password"]:focus::placeholder {
+                transform: translateY(-100%);
+                transition: transform 0.2s ease-in-out;
+                font-size: 14px;
+            }
+
+            .input-field input[type="email"]:not(:focus)::placeholder,
+            .input-field input[type="password"]:not(:focus)::placeholder {
+                transform: translateY(0%);
+                transition: transform 0.2s ease-in-out;
+                font-size: 16px;
+            }
+
+            .wrapper .login {
+                background: #fff;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                font-weight: 600;
+                border-radius: 45px;
+                width: 200px;
+                height: 40px;
+                margin-top: 20px;
+                color: #000;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h2>Login</h2>
+            <div class="input-field">
+                <input type="email" placeholder="Email">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Password">
+                <i class="fas fa-lock"></i>
+            </div>
+            <button class="login">Login</button>
+        </div>
+    </body>
+</html>
